@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font-awesome link from CDNJS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Font-awesome link from CDNJS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,700;1,400&family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Profile Page</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navigator">
+        <div class="navigator__inner-container">
+          <ul class="flex navigator__nav-links">
+            <li class="site-brand">
+              <a class="nav-link" href="#">LinkedMe!</a>
+            </li>
+            <li><a class="nav-link" href="#">Home</a></li>
+            <li><a class="nav-link active" href="#">My Profile</a></li>
+            <li><a class="nav-link" href="#">Find Connections</a></li>
+            <li class="sign-out"><a class="nav-link" href="#">Sign Out</a></li>
+          </ul>
+        </div>
+      </nav>
+      <main>
+        <div class="main-container flex">
+          <section class="flex left user-information">
+            <article class="user-profile">
+              <div class="upper">
+                <img
+                  class="avatar"
+                  src="./images/user-circle.png"
+                  alt="user avatar"
+                />
+              </div>
+              <div class="lower">
+                <span class="user-profile__username">Maestro DeProgrammer</span>
+                <div class="location">
+                  <img class="icon" src="./images/map-marker.png" />
+                  <span>Anywhere</span>
+                </div>
+                <div>
+                  <span class="user-profile__job-roles"
+                    >Digital Nomad | Evil Mastermind | Microwaved Food
+                    Enjoyer</span
+                  >
+                  <p class="user-profile__bio">
+                    My bio goes here. I can't think of what to put here though.
+                  </p>
+                </div>
+                <div class="user-profile__edit">
+                  <a class="flex" href="#"
+                    ><img
+                      class="icon"
+                      src="./images/gear.png"
+                      alt="edit profile"
+                    />
+                    <span>Edit Profile</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="user-credentials">
+              <div class="user-credentials__education-header">
+                <span>Education</span>
+              </div>
+              <ul class="flex user-credentials__list">
+                <li class="user-credentials__list-item">
+                  <span class="school">Coding Dojo - Full Stack Bootcamp</span>
+                  <span class="date">March 2022 - July 2022</span>
+                  <p>
+                    Quintuple Black Belt in ALL of the stacks. I'm really really
+                    good. Hire me.
+                  </p>
+                </li>
+                <li class="user-credentials__list-item">
+                  <span class="school">FreeCodeCamp</span>
+                  <span class="date">Jan 2020 - Present</span>
+                  <p>
+                    Learned Front-end Development track, Data Structures and
+                    Algorithms, Back-end development and APIs.
+                  </p>
+                </li>
+              </ul>
+            </article>
+          </section>
+          <section class="flex right connections"></section>
+        </div>
+      </main>
+    </header>
+  </body>
+</html>

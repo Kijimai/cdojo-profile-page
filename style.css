@@ -1,0 +1,274 @@
+/* Fonts Available */
+/* Montserrat, Open Sans */
+
+:root {
+  --default-font-size: 62.5%; /* 10px / 16px = 62.5% */
+  --color-white: 0 0% 100%;
+  --color-dark: 0 0% 10%;
+
+  --color-dark-grey: 0 0% 31%;
+
+  --color-primary-blue: 188 78% 41%;
+}
+
+/* Basic Style Resets */
+html {
+  box-sizing: border-box;
+  font-size: var(--default-font-size); /* 10px -- check root variables */
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+/* Base Styling */
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+  object-fit: contain;
+}
+
+/* reusable classes */
+
+.flex {
+  display: flex;
+}
+
+.navigator {
+  height: 7rem;
+  margin-bottom: 2rem;
+}
+
+.navigator__inner-container {
+  background-color: hsl(var(--color-dark));
+  height: 100%;
+}
+
+.navigator__nav-links {
+  height: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  font-size: 2rem;
+}
+
+.navigator__nav-links .site-brand .nav-link {
+  font-weight: 700;
+}
+
+.navigator__nav-links .nav-link {
+  text-decoration: none;
+  color: hsl(var(--color-white));
+}
+
+.navigator__nav-links .nav-link.active {
+  font-weight: 700;
+}
+
+.navigator__nav-links .sign-out {
+  margin-left: auto;
+  background-color: hsl(var(--color-primary-blue));
+  font-weight: 700;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .navigator {
+    height: 5rem;
+  }
+
+  .navigator__nav-links {
+    max-width: 90%;
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navigator__nav-links {
+    font-size: 1.2rem;
+  }
+}
+
+/* Main Content */
+
+.main-container {
+  margin: 0 auto;
+  height: 100%;
+  max-width: 80%;
+  gap: 2rem;
+}
+
+.left,
+.right {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.left {
+  flex: 3 0;
+}
+
+.right {
+  flex: 2 0;
+  background-color: green;
+}
+
+/* User Information */
+
+.user-profile,
+.user-credentials {
+  border: 0.2rem solid lightgrey;
+}
+
+.user-profile .user-profile__username {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.upper {
+  position: relative;
+  height: 8rem;
+  background-color: hsl(var(--color-primary-blue));
+  margin-bottom: 4rem;
+}
+
+.upper .avatar {
+  position: absolute;
+  top: 3rem;
+  left: 2rem;
+  height: 10rem;
+  width: 10rem;
+  object-fit: cover;
+  border: 0.2rem solid hsl(var(--color-white));
+  border-radius: 50%;
+}
+
+.lower {
+  padding: 2rem;
+}
+
+.lower > * {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.lower .location span,
+.user-profile .user-profile__job-roles,
+.user-profile__edit,
+.user-profile__bio {
+  font-size: 1.8rem;
+}
+
+.lower .location span {
+  font-weight: 700;
+}
+
+.user-profile__bio {
+  font-family: "Open Sans";
+}
+
+.user-profile__edit a.flex {
+  align-items: center;
+}
+
+.user-profile__edit .icon {
+  margin-right: 0.5rem;
+}
+
+.user-profile__edit a {
+  text-decoration: none;
+}
+
+.user-profile__edit span {
+  color: hsl(var(--color-dark));
+  font-weight: 700;
+  transition: 0.2s ease color;
+}
+
+.user-profile__edit:hover span {
+  position: relative;
+  color: hsl(var(--color-primary-blue));
+}
+
+.user-profile__edit span::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 0;
+  height: 0.2rem;
+  background-color: hsl(var(--color-primary-blue));
+  transition: 0.2s ease width;
+}
+
+.user-profile__edit:hover span::after {
+  width: 100%;
+  background-color: hsl(var(--color-primary-blue));
+}
+
+@media only screen and (max-width: 900px) {
+  .main-container {
+    max-width: 90%;
+  }
+}
+
+/* User Education / Credentials */
+.user-credentials {
+}
+
+.user-credentials__list {
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  font-size: 1.6rem;
+}
+
+.user-credentials__list-item > * {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.user-credentials__list-item .school {
+  font-weight: 700;
+}
+
+.user-credentials__list-item .date {
+  font-weight: 700;
+  color: grey;
+}
+
+.user-credentials__list-item p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.user-credentials .user-credentials__education-header {
+  padding: 2rem;
+  background-color: hsl(var(--color-dark-grey));
+}
+
+.user-credentials .user-credentials__education-header span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: hsl(var(--color-white));
+}
