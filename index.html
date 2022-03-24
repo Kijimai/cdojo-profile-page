@@ -49,7 +49,9 @@
                 />
               </div>
               <div class="lower">
-                <span class="user-profile__username">Maestro DeProgrammer</span>
+                <span id="user-profile-username" class="user-profile__username"
+                  >Maestro DeProgrammer</span
+                >
                 <div class="location">
                   <img class="icon" src="./images/map-marker.png" />
                   <span>Anywhere</span>
@@ -64,14 +66,14 @@
                   </p>
                 </div>
                 <div class="user-profile__edit">
-                  <a class="flex" href="#"
-                    ><img
+                  <button onclick="randomizeName()" class="flex" href="#">
+                    <img
                       class="icon"
                       src="./images/gear.png"
                       alt="edit profile"
                     />
-                    <span>Edit Profile</span></a
-                  >
+                    <span>Edit Profile</span>
+                  </button>
                 </div>
               </div>
             </article>
@@ -103,91 +105,20 @@
             <div class="flex connections__requests">
               <div class="upper">
                 <div class="flex header">
-                  <span class="request-amount">4</span>
+                  <span id="request-amount" class="request-amount"></span>
                   <h2>Connection Requests</h2>
                 </div>
-                <ul class="flex request-list">
-                  <li class="flex connection__request">
-                    <img
-                      class="request-avatar"
-                      src="./images/user-circle.png"
-                      alt="user avatar"
-                    />
-                    <div class="request-username">
-                      <span>Elon Musk</span>
-                    </div>
-                    <div class="flex acceptance">
-                      <span title="Accept connection request" class="accept"
-                        ><i class="fa-solid fa-check"></i
-                      ></span>
-                      <span title="Deny connection request" class="deny"
-                        ><i class="fa-solid fa-xmark"></i
-                      ></span>
-                    </div>
-                  </li>
-                  <li class="flex connection__request">
-                    <img
-                      class="request-avatar"
-                      src="./images/user-circle.png"
-                      alt="user avatar"
-                    />
-                    <div class="request-username">
-                      <span>Post Malone</span>
-                    </div>
-                    <div class="flex acceptance">
-                      <span title="Accept connection request" class="accept"
-                        ><i class="fa-solid fa-check"></i
-                      ></span>
-                      <span title="Deny connection request" class="deny"
-                        ><i class="fa-solid fa-xmark"></i
-                      ></span>
-                    </div>
-                  </li>
-                  <li class="flex connection__request">
-                    <img
-                      class="request-avatar"
-                      src="./images/user-circle.png"
-                      alt="user avatar"
-                    />
-                    <div class="request-username">
-                      <span>Pre Malone</span>
-                    </div>
-                    <div class="flex acceptance">
-                      <span title="Accept connection request" class="accept"
-                        ><i class="fa-solid fa-check"></i
-                      ></span>
-                      <span title="Deny connection request" class="deny"
-                        ><i class="fa-solid fa-xmark"></i
-                      ></span>
-                    </div>
-                  </li>
-                  <li class="flex connection__request">
-                    <img
-                      class="request-avatar"
-                      src="./images/user-circle.png"
-                      alt="user avatar"
-                    />
-                    <div class="request-username">
-                      <span>Tom from Myspace</span>
-                    </div>
-                    <div class="flex acceptance">
-                      <span title="Accept connection request" class="accept"
-                        ><i class="fa-solid fa-check"></i
-                      ></span>
-                      <span title="Deny connection request" class="deny"
-                        ><i class="fa-solid fa-xmark"></i
-                      ></span>
-                    </div>
-                  </li>
-                </ul>
+                <ul class="flex request-list" id="request-list"></ul>
               </div>
               <div class="flex lower">
                 <div class="flex header">
-                  <span class="connection-amount">500+</span>
+                  <span id="connection-amount" class="connection-amount"
+                    >4</span
+                  >
                   <h2>Your Connections</h2>
                 </div>
-                <ul class="flex connections-list">
-                  <li class="connections-list__list-item flex">
+                <ul id="connections-list" class="flex connections-list">
+                  <!-- <li class="connections-list__list-item flex">
                     <img
                       class="request-avatar"
                       src="./images/user-circle.png"
@@ -226,7 +157,7 @@
                     <div class="connection-username">
                       <span>Tom from Myspace</span>
                     </div>
-                  </li>
+                  </li> -->
                 </ul>
                 <div class="connections__view-more">
                   <a class="view-more-link" href="#">View More</a>
@@ -237,5 +168,6 @@
         </div>
       </main>
     </header>
+    <script src="./script.js" type="text/javascript"></script>
   </body>
 </html>

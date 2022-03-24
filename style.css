@@ -50,6 +50,8 @@ body {
   display: flex;
 }
 
+/* Navigator Section */
+
 .navigator {
   height: 7rem;
   margin-bottom: 2rem;
@@ -205,7 +207,7 @@ body {
   font-family: "Open Sans";
 }
 
-.user-profile__edit a.flex {
+.user-profile__edit button.flex {
   align-items: center;
 }
 
@@ -213,7 +215,12 @@ body {
   margin-right: 0.5rem;
 }
 
-.user-profile__edit a {
+.user-profile__edit button {
+  font-size: 1.8rem;
+  font-family: "Montserrate", sans-serif;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
   text-decoration: none;
 }
 
@@ -370,6 +377,7 @@ body {
 
 .connection__request .acceptance .accept,
 .connection__request .acceptance .deny {
+  border: none;
   display: inline-block;
   font-size: 1.8rem;
   border-radius: 50%;
