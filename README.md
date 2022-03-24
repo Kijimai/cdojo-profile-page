@@ -14,3 +14,5 @@ Yup! I just wanted to try and see if I could recreate the wireframe and add in s
 This project now has some basic Javascript functionality that re-renders certain parts of the 
 page depending on what the user interacts with!
 Accepting a friend request will update the counter of the connections list as well as removing that particular request from the requests list. 
+
+Clicking on Edit Profile will randomize the user name.
