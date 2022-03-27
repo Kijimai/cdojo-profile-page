@@ -79,24 +79,22 @@ function generateRequests() {
   let output = ""
 
   for (let i = 0; i < requests.length; i++) {
-    output += `<li class="flex connection__request">
-    <img
-    class="request-avatar"
-    src="./images/user-circle.png"
-    alt="user avatar"
-    />
-    <div class="request-username">
-    <span>${requests[i].userName}</span>
-    </div>
-    <div class="flex acceptance">
-    <button onclick="acceptRequest(${i})" title="Accept connection request" class="accept"
-      ><i class="fa-solid fa-check"></i
-    ></button>
-    <button onclick="denyRequest(${i})" title="Deny connection request" class="deny"
-      ><i class="fa-solid fa-xmark"></i
-    ></button>
-    </div>
-    </li>`
+    output += `
+    <li class="flex connection__request">
+      <img class="request-avatar" src="./images/user-circle.png" alt="user avatar" />
+      <div class="request-username">
+        <span>${requests[i].userName}</span>
+      </div>
+      <div class="flex acceptance">
+        <button onclick="acceptRequest(${i})" title="Accept connection request" class="accept">
+          <i class="fa-solid fa-check"></i> 
+        </button>
+      <button onclick="denyRequest(${i})" title="Deny connection request" class="deny">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      </div>
+    </li>
+    `
   }
   requestListContainer.innerHTML = output
   requestAmount.textContent = requests.length
@@ -108,15 +106,11 @@ function generateConnections() {
 
   for (let i = 0; i < 4; i++) {
     output += `<li class="connections-list__list-item flex">
-                    <img
-                      class="request-avatar"
-                      src="./images/user-circle.png"
-                      alt="user avatar"
-                    />
-                    <div class="connection-username">
-                      <span>Tom from Myspace</span>
-                    </div>
-                  </li>`
+                <img class="request-avatar" src="./images/user-circle.png" alt="user avatar"/>
+                <div class="connection-username">
+                  <span>Tom from Myspace</span>
+                </div>
+              </li>`
     connectionsListContainer.innerHTML = output
   }
   connectionAmount.textContent = connectionsList.length
